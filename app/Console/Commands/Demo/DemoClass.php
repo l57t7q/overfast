@@ -9,10 +9,11 @@
 namespace App\Console\Commands\Demo;
 use App\Console\Base;
 
-class DemoTest extends Base
+class DemoClass extends Base
 {
-    public function start() {
-        echo "testEcho";
+    public function start(...$param) {
+        var_dump($param);
+        echo "Hello World";
         $this->googbye();
     }
 }

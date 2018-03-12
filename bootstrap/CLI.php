@@ -5,6 +5,7 @@ class CLI
 {
 
     public static function run() {
+        $param = array();
         $argv = $_SERVER['argv'];
         foreach ($argv as $k => $v) {
             if (preg_match('/run/', $v)) unset($argv[$k]);
@@ -13,6 +14,7 @@ class CLI
         $argv = explode(':', $argv);
         if (isset($argv[1])) $argv[1] = explode(';', $argv[1]);
         $command = empty($argv[0]) ? 'Help' : array_shift($argv);
+        if (isset($argv[0])) $param = $argv[0];
         $command = explode('/', $command);
         $method = 'start';
 
@@ -22,10 +24,9 @@ class CLI
         }
         $entryClass = new $entryClass;
         try {
-            call_user_func_array(array($entryClass,$method), $argv);
+            call_user_func_array(array($entryClass,$method), $param);
         } catch (\Throwable $e) {
             \App\Log::error($e);
         }
-
     }
 }

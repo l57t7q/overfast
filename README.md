@@ -173,3 +173,11 @@ $dispatcher = FastRoute\cachedDispatcher(function(FastRoute\RouteCollector $r) {
 
 The second parameter to the function is an options array, which can be used to specify the cache
 file location, among other things.
+
+### CLI Mode
+It's very easy to run your php script in CLI mode.Here's some basic usage:
+```bash
+php run Help
+php run Demo/DemoClass:1;2;3;4
+```
+
