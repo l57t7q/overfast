@@ -19,12 +19,15 @@
   "autoload": {
     "psr-4": {
       "App\\": "app/",
+      "Boot\\": "bootstrap/",
       "Models\\": "app/Models/",
       "Controllers\\": "app/Controllers/"
     },
     "files": [
-      "app/helpers.php"
-    ]
+      "app/helpers.php",
+      "bootstrap/bootstrap.php"
+    ],
+    "classmap" : ["app/Console/"]
   },
   "minimum-stability": "dev",
   "prefer-stable": true

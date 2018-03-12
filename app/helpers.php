@@ -29,3 +29,14 @@ if (!function_exists('request')) {
         return $result;
     }
 }
+
+if (!function_exists('isCli')) {
+    /**
+     * Judge if CLI
+     *
+     * @return bool
+     */
+    function isCli() {
+        return PHP_SAPI == 'cli';
+    }
+}

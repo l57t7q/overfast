@@ -8,10 +8,9 @@
 
 namespace App\Controllers\Test;
 
-
 class Demo
 {
-    public function echoTest() {
+    public static function echoTest() {
         echo "Hello World";
         $res = requeset('getId');
         echo $res->getId;

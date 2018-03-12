@@ -1,6 +1,5 @@
 <?php
-define('RPATH', realpath(__DIR__.'/../'));
-define('APATH', RPATH . '/app/');
+define('RPATH', realpath(__DIR__));
 define('BPATH', RPATH . '/bootstrap/');
 define('VERSION', '1.0');
 
