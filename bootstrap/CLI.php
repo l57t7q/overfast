@@ -12,7 +12,7 @@ class CLI
         }
         $argv = array_shift($argv);
         $argv = explode(':', $argv);
-        if (isset($argv[1])) $argv[1] = explode(';', $argv[1]);
+        if (isset($argv[1])) $argv[1] = explode(',', $argv[1]);
         $command = empty($argv[0]) ? 'Help' : array_shift($argv);
         if (isset($argv[0])) $param = $argv[0];
         $command = explode('/', $command);

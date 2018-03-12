@@ -178,6 +178,6 @@ file location, among other things.
 It's very easy to run your php script in CLI mode.Here's some basic usage:
 ```bash
 php run Help
-php run Demo/DemoClass:1;2;3;4
+php run Demo/DemoClass:1,2,3,4
 ```
 
